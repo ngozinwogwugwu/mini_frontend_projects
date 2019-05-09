@@ -1,0 +1,4 @@
+things to take care of:
+- If a user enters valid information, the form assumes that it will *always* be valid. This means that if they enter a valid zip code and delete it, the form will use that invalid zip code. This causes problems
+- I'd like to represent the mood as a prop, not a state (in the mode selector form)
+- I'd like to use sass here, too
