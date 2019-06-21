@@ -3,7 +3,6 @@ import MarkdownRenderer from 'react-markdown-renderer';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Markdown from './markdown';
 import ReactMarkdown from 'markdown-to-jsx';
 
 class MarkdownViewer extends Component {
