@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from './components/Footer';
 import Header from './components/Header';
 import CoffeeForm from './CoffeeForm';
 
@@ -14,9 +13,6 @@ class CoffeeApp extends Component {
         </div>
         <div>
           <CoffeeForm />
-        </div>
-        <div>
-          < Footer />
         </div>
       </div>  
     );

@@ -1,9 +1,10 @@
+import MarkdownRenderer from 'react-markdown-renderer';
 import React from 'react';
+import GithubContent from 'github-content';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
@@ -74,6 +75,34 @@ class SqliteHeaderViewer extends React.Component {
     return headerString;
   }
 
+  getAFile = (isCorrupt) => {
+    var fileName = isCorrupt ? 'tests/files/databases/corruptheader-1.cdb' : 'tests/files/databases/1table-1page.cdb'
+    var options = {
+      owner: 'uchicago-cs',
+      repo: 'chidb',
+      branch: 'master' // defaults to master
+    };
+
+    var process_file = (err, file) => {
+      if (err) return console.log(err);
+      this.setState({ fileByteArray: file.contents });
+      this.checkForCorruption();
+      file.name = file.path;
+      this.setState({file: file});
+    }
+
+    var gc = new GithubContent(options);
+    gc.file(fileName, process_file);
+  }
+
+  getCorruptFile = () => {
+    this.getAFile(true);
+  }
+
+  getGoodFile = () => {
+    this.getAFile(false);
+  }
+
   getPageSize = () => {
     if (this.state.fileByteArray.length < sqliteHeaderLength) return "";
     return (((this.state.fileByteArray[16] & 0xFF) << 8) | (this.state.fileByteArray[17] & 0xFF));
@@ -131,33 +160,28 @@ class SqliteHeaderViewer extends React.Component {
     this.setState({isCorrupt: isCorrupt});
   }
 
+  introText = '# SQLite Header Viewer\n\nI\'ve been learning about [SQLite file headers](http://chi.cs.uchicago.edu/chidb/fileformat.html#file-header) using chidb. For fun I figured I\'d try to make a visualizer using react. You can upload a SQLite file here (If you don\'t already have a SQLite file, you can grab one from the [Chidb Github page](https://github.com/uchicago-cs/chidb/tree/master/tests/files/databases))\n\n## SQLite headers rundown\n\nSQLite headers are 100 bytes long, and contain a few things:\n\n - A string that says "SQLite format 3"\n - bytewise checks\n - Information about the database itself (page size, schema version, ...)\n';
+
+
   render() {
     const { classes } = this.props;
     const { file, fileByteArray, isCorrupt, corruptionReason } = this.state;
 
     return (
       <div>
-        <Typography component="div" style={{ padding: 8 * 3 }}>
-          I've been learning about <Link href="http://chi.cs.uchicago.edu/chidb/fileformat.html#file-header">
-          SQLite file headers </Link> through chidb.
-          <br/>
-          SQLite headers are 100 bytes long, and contain a few things:
-            <br/>
-            - A string that says "SQLite format 3"
-            <br/>
-            - bytewise checks
-            <br/>
-            - Information about the database itself (page size, schema version, ...)
-          <br/>
-          <br/>
-          For fun I figured I'd try to make a visualizer using react. You can upload a SQLite file here
-            (If you don't already have a SQLite file, you can grab one from the <Link href="https://github.com/uchicago-cs/chidb/tree/master/tests/files/databases">
-            Chidb Github page</Link>)
-        </Typography>
+        <Paper padding="20">
+          <MarkdownRenderer markdown={this.introText} />
+        </Paper>
         <Typography component="div" style={{ padding: 8 * 3 }}>
           file Name: {file.name} <br/>
           file Size: {file.size} bytes<br/>
         </Typography>
+        <Button variant="contained" component="span" onClick={this.getCorruptFile} className={classes.button}>
+          Use Example (corrupt file)
+        </Button>
+        <Button variant="contained" component="span" onClick={this.getGoodFile} className={classes.button}>
+          Use Example (good file)
+        </Button>
         <input
           accept="*"
           className={classes.input}
@@ -167,12 +191,12 @@ class SqliteHeaderViewer extends React.Component {
         />
         <label htmlFor="contained-button-file">
           <Button variant="contained" component="span" className={classes.button}>
-            Upload
+            Upload your own
           </Button>
         </label>
         <br/>
         { isCorrupt &&
-          <Button center variant="contained" color="secondary" className={classes.errorPaper}>
+          <Button variant="contained" color="secondary" className={classes.errorPaper}>
             <Typography component="div" style={{ padding: 8 * 3 }}>
               <br/>
               Wow! This file is super corrupt!
@@ -183,7 +207,7 @@ class SqliteHeaderViewer extends React.Component {
         }
         { (fileByteArray.length !== 0) &&
           <div className={classes.root}>
-            <Grid container spacing={24} className={classes.container} center>
+            <Grid container spacing={24} className={classes.container}>
               <Grid item xs={12} sm={12}>
                 <Paper className={classes.paper}>Title:<br/>{this.getHeaderString()}</Paper>
               </Grid>

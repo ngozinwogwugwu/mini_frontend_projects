@@ -57,34 +57,36 @@ class SimpleTable extends Component {
 
   render = () =>  {
     return (
-      <Paper>
-        <Table>
-          <div>
-            <TableHead>
-              <TableRow>
-                <TableCell>model</TableCell>
-                <TableCell> license plate</TableCell>
-                <TableCell>energy level</TableCell>
-                <TableCell numeric>distance to travel</TableCell>
-                <TableCell>location</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {this.state.scooters.map(row => {
-                return (
-                  <TableRow key={row.id}>
-                    <TableCell>{row.model}</TableCell>
-                    <TableCell>{row.license_plate}</TableCell>
-                    <TableCell>{row.energy_level}</TableCell>
-                    <TableCell>{row.distance_to_travel}</TableCell>
-                    <TableCell>{row.location.lng}, {row.location.lng}</TableCell>
-                  </TableRow>
-                );
-              })}
-          </TableBody>
-        </div>
-        </Table>
-      </Paper>
+      <div>
+        <Paper>
+          <Table>
+            <div>
+              <TableHead>
+                <TableRow>
+                  <TableCell>model</TableCell>
+                  <TableCell> license plate</TableCell>
+                  <TableCell>energy level</TableCell>
+                  <TableCell numeric>distance to travel</TableCell>
+                  <TableCell>location (lat/lon)</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {this.state.scooters.map(row => {
+                  return (
+                    <TableRow key={row.id}>
+                      <TableCell>{row.model}</TableCell>
+                      <TableCell>{row.license_plate}</TableCell>
+                      <TableCell>{row.energy_level}</TableCell>
+                      <TableCell>{row.distance_to_travel}</TableCell>
+                      <TableCell>{row.location.lat}, {row.location.lng}</TableCell>
+                    </TableRow>
+                  );
+                })}
+            </TableBody>
+          </div>
+          </Table>
+        </Paper>
+      </div>
     );
   }
 }

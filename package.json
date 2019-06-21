@@ -12,6 +12,8 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
+    "github-content": "^1.0.1",
+    "markdown-to-jsx": "^6.10.2",
     "material-ui-datatables": "^0.18.2",
     "react": "^16.8.6",
     "react-bootstrap": "^0.32.1",

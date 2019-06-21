@@ -34,23 +34,23 @@ class App extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs value={value} onChange={this.handleChange}>
-            <Tab label="SQLite Header Viewer" />
-            <Tab label="Scooter Table" />
-            <Tab label="Coffee Clicker" />
             <Tab label="Markdown Viewer" />
+            <Tab label="SQLite Header Viewer" />
+            <Tab label="Coffee Clicker" />
+            <Tab label="Scooter Table" />
           </Tabs>
         </AppBar>
         {value === 0 &&
-          <SqliteHeaderViewer />
+          <MarkdownViewer />
         }
         {value === 1 &&
-          <ScooterTableApp />
+          <SqliteHeaderViewer />
         }
         {value === 2 &&
           <CoffeeApp />
         }
         {value === 3 &&
-          <MarkdownViewer />
+          <ScooterTableApp />
         }
       </div>
     );
