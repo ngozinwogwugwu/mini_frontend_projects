@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MarkdownRenderer from 'react-markdown-renderer';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';

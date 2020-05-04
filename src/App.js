@@ -8,6 +8,7 @@ import SqliteHeaderViewer from './SqliteHeaderViewer.js'
 import MarkdownViewer from './MarkdownViewer.js'
 import CoffeeApp from './coffeeClicker/CoffeeApp.js'
 import ScooterTableApp from './scooterTable/ScooterTableApp.js'
+import PracticeProblems from './leetcodeProblems/PracticeProblems.js'
 import './App.css';
 
 const styles = theme => ({
@@ -34,6 +35,7 @@ class App extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs value={value} onChange={this.handleChange}>
+            <Tab label="Practice Problems" />
             <Tab label="Markdown Viewer" />
             <Tab label="SQLite Header Viewer" />
             <Tab label="Coffee Clicker" />
@@ -41,15 +43,18 @@ class App extends React.Component {
           </Tabs>
         </AppBar>
         {value === 0 &&
-          <MarkdownViewer />
+          <PracticeProblems />
         }
         {value === 1 &&
-          <SqliteHeaderViewer />
+          <MarkdownViewer />
         }
         {value === 2 &&
-          <CoffeeApp />
+          <SqliteHeaderViewer />
         }
         {value === 3 &&
+          <CoffeeApp />
+        }
+        {value === 4 &&
           <ScooterTableApp />
         }
       </div>
