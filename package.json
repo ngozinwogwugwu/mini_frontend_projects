@@ -19,6 +19,7 @@
     "react-bootstrap": "^0.32.1",
     "react-bootstrap-intl-tel-input": "^1.0.1",
     "react-country-select": "^1.0.5",
+    "react-d3-tree": "^1.16.1",
     "react-dom": "^16.8.6",
     "react-markdown-renderer": "^1.4.0",
     "react-radio-buttons": "^1.2.2",

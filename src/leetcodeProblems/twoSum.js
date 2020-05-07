@@ -33,7 +33,7 @@ class TwoSum extends React.Component {
     let nums = this.state.input1.split`,`.map(x=>+x)
     for (let i=0; i< nums.length; i++) {
       for (let j=i+1; j< nums.length; j++) {
-        if (nums[i]+nums[j] === this.state.input2) {
+        if (nums[i]+nums[j] === parseInt(this.state.input2)) {
           this.setState({output: nums[i] + ', ' + nums[j]});
           return
         }
