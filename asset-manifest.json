@@ -1,21 +1,28 @@
 {
   "files": {
     "main.css": "/mini_frontend_projects/static/css/main.9541d1c2.chunk.css",
-    "main.js": "/mini_frontend_projects/static/js/main.d460ea5d.chunk.js",
-    "main.js.map": "/mini_frontend_projects/static/js/main.d460ea5d.chunk.js.map",
-    "runtime~main.js": "/mini_frontend_projects/static/js/runtime~main.6aa86fdd.js",
-    "runtime~main.js.map": "/mini_frontend_projects/static/js/runtime~main.6aa86fdd.js.map",
-    "static/js/2.903da910.chunk.js": "/mini_frontend_projects/static/js/2.903da910.chunk.js",
-    "static/js/2.903da910.chunk.js.map": "/mini_frontend_projects/static/js/2.903da910.chunk.js.map",
+    "main.js": "/mini_frontend_projects/static/js/main.011b9f5b.chunk.js",
+    "main.js.map": "/mini_frontend_projects/static/js/main.011b9f5b.chunk.js.map",
+    "runtime-main.js": "/mini_frontend_projects/static/js/runtime-main.fecddd7e.js",
+    "runtime-main.js.map": "/mini_frontend_projects/static/js/runtime-main.fecddd7e.js.map",
+    "static/js/2.ded6f347.chunk.js": "/mini_frontend_projects/static/js/2.ded6f347.chunk.js",
+    "static/js/2.ded6f347.chunk.js.map": "/mini_frontend_projects/static/js/2.ded6f347.chunk.js.map",
     "index.html": "/mini_frontend_projects/index.html",
-    "precache-manifest.a11dd2eacb31dbb6a8049f032d236f30.js": "/mini_frontend_projects/precache-manifest.a11dd2eacb31dbb6a8049f032d236f30.js",
+    "precache-manifest.bd4f461bfc06a13c05d57e961a7b2476.js": "/mini_frontend_projects/precache-manifest.bd4f461bfc06a13c05d57e961a7b2476.js",
     "service-worker.js": "/mini_frontend_projects/service-worker.js",
     "static/css/main.9541d1c2.chunk.css.map": "/mini_frontend_projects/static/css/main.9541d1c2.chunk.css.map",
+    "static/js/2.ded6f347.chunk.js.LICENSE.txt": "/mini_frontend_projects/static/js/2.ded6f347.chunk.js.LICENSE.txt",
     "static/media/coffee.jpg": "/mini_frontend_projects/static/media/coffee.40da0df0.jpg",
     "static/media/espresso.jpg": "/mini_frontend_projects/static/media/espresso.adef6225.jpg",
     "static/media/herbal_tea.jpg": "/mini_frontend_projects/static/media/herbal_tea.5e9ab4bc.jpg",
     "static/media/latte.jpg": "/mini_frontend_projects/static/media/latte.47304121.jpg",
     "static/media/mocha.jpg": "/mini_frontend_projects/static/media/mocha.14351c73.jpg",
     "static/media/motorcycle-solid.svg": "/mini_frontend_projects/static/media/motorcycle-solid.98497820.svg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fecddd7e.js",
+    "static/js/2.ded6f347.chunk.js",
+    "static/css/main.9541d1c2.chunk.css",
+    "static/js/main.011b9f5b.chunk.js"
+  ]
 }
