@@ -1,0 +1,32 @@
+{
+  "Le survivant": {
+    "audioSource": "chapter1/the_survivor.mp3",
+    "english": "the survivor (the boy who lived)"
+  },
+
+  "qui habitaient au 4": {
+    "audioSource": "chapter1/who_lived_in.mp3",
+    "english": "who lived in 4"
+  },
+  "avaient toujours affirmé": {
+    "audioSource": "chapter1/always_said.mp3",
+    "english": "always said"
+  },
+  "la plus grande fierté": {
+    "audioSource": "chapter1/the_greatest_pride.mp3",
+    "english": "the greatest pride"
+  },
+
+  "Jamais": {
+    "audioSource": "chapter1/never.mp3",
+    "english": "Never"
+  },
+  "quiconque": {
+    "audioSource": "chapter1/anyone.mp3",
+    "english": "anyone"
+  },
+  "parfaitement normaux": {
+    "audioSource": "chapter1/perfectly_normal.mp3",
+    "english": "perfectly normal"
+  }
+}

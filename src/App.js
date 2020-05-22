@@ -9,6 +9,7 @@ import MarkdownViewer from './MarkdownViewer.js'
 import CoffeeApp from './coffeeClicker/CoffeeApp.js'
 import ScooterTableApp from './scooterTable/ScooterTableApp.js'
 import PracticeProblems from './leetcodeProblems/PracticeProblems.js'
+import FrenchHarryPotter from './learner/FrenchHarryPotter.js'
 import './App.css';
 
 const styles = theme => ({
@@ -35,15 +36,16 @@ class App extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs value={value} onChange={this.handleChange}>
-            <Tab label="Practice Problems" />
+            <Tab label="Harry Potter à L'École des Sorciers" />
             <Tab label="Markdown Viewer" />
             <Tab label="SQLite Header Viewer" />
             <Tab label="Coffee Clicker" />
             <Tab label="Scooter Table" />
+            <Tab label="Practice Problems" />
           </Tabs>
         </AppBar>
         {value === 0 &&
-          <PracticeProblems />
+          <FrenchHarryPotter />
         }
         {value === 1 &&
           <MarkdownViewer />
@@ -56,6 +58,9 @@ class App extends React.Component {
         }
         {value === 4 &&
           <ScooterTableApp />
+        }
+        {value === 5 &&
+          <PracticeProblems />
         }
       </div>
     );

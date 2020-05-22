@@ -1,47 +1,32 @@
 {
-  "title": [
-    {
-      "french": "Le survivant",
-      "audioSource": "https://translate.google.com/translate_tts?ie=UTF-8&q=le%20survivant&tl=fr&total=1&idx=0&textlen=12&tk=238654.334185&client=webapp&prev=input",
-      "directTranslation": "the survivor",
-      "english": "the boy who lived"
-    }
-  ],
+  "title": ["Le survivant"],
   "paragraphs": [
     {
+      "id":1,
       "sentences": [
         {
-          "french":"Mr et Mrs Dursley, qui habitaient au 4, Privet Drive, avaient toujours affirmé avec la plus grande fierté qu'ils étaient parfaitement normaux, merci pour eux.",
+          "id":1,
+          "french":"Mr et Mrs Dursley, **qui habitaient au 4**, Privet Drive, **avaient toujours affirmé** avec **la plus grande fierté** qu'ils étaient **parfaitement normaux**, merci pour eux.",
           "english":"Mr. and Mrs. Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much"
         },
         {
-          "french":"Jamais quiconque n'aurait imaginé qu'ils puissent se trouver impliqués dans quoi que ce soit d'étrange ou de mystérieux.",
+          "id":2,
+          "french":"**Jamais** **quiconque** n'aurait imaginé qu'ils puissent se trouver impliqués dans quoi que ce soit d'étrange ou de mystérieux.", 
           "english":"They were the last people you’d expect to be involved in anything strange or mysterious,"
         },
         {
+          "id":3,
           "french":"Ils n'avaient pas de temps à perdre avec des sornettes.",
           "english":"because they just didn’t hold with such nonsense."
         }
       ],
       "vocabList": [
-        {
-          "french": "qui habitaient au 4",
-          "audioSource": "https://translate.google.com/translate_tts?ie=UTF-8&q=qui%20habitaient%20au%204&tl=fr&total=1&idx=0&textlen=19&tk=77985.495096&client=webapp&prev=input",
-          "directTranslation": "who lived in 4",
-          "english": "of 4"
-        },
-        {
-          "french": "avaient toujours affirmé",
-          "audioSource": "https://translate.google.com/translate_tts?ie=UTF-8&q=avaient%20toujours%20affirme%CC%81&tl=fr&total=1&idx=0&textlen=25&tk=732430.888919&client=webapp&prev=input",
-          "directTranslation": "always said",
-          "english": ""
-        },
-        {
-          "french": "la plus grande fierté",
-          "audioSource": "https://translate.google.com/translate_tts?ie=UTF-8&q=la%20plus%20grande%20fierte%CC%81&tl=fr&total=1&idx=0&textlen=22&tk=645620.1008813&client=webapp&prev=input",
-          "directTranslation": "the greatest pride",
-          "english": ""
-        }
+        "qui habitaient au 4",
+        "avaient toujours affirmé",
+        "la plus grande fierté",
+        "parfaitement normaux",
+        "Jamais",
+        "quiconque"
       ]
     }
   ]
