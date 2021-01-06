@@ -9,7 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@material-ui/core": "^3.9.4",
     "ajv": "^6.12.2",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "gh-pages": "^2.2.0",
     "github-content": "^1.0.1",
