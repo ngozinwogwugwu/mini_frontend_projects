@@ -23,7 +23,7 @@
     "react-dom": "^16.13.1",
     "react-markdown-renderer": "^1.4.0",
     "react-radio-buttons": "^1.2.2",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "react-zipcode": "^1.0.1",
     "typeface-roboto": "0.0.75",
     "zippo": "^1.0.1"
